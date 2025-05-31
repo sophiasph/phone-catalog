@@ -3,6 +3,7 @@
 An interactive and responsive online store built with **React**, showcasing a catalog of gadgets including phones, tablets, and accessories. Users can browse products, add them to favorites or the shopping cart, and view detailed product pages — all in a clean, intuitive interface.
 
 [🔗 DEMO LINK](https://sophiasph.github.io/phone-catalog/)
+
 **Design (Figma)**: (https://www.figma.com/design/BUusqCIMAWALqfBahnyIiH/Phone-catalog-(V2)-Original-Dark)
 
 ---
