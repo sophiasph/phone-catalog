@@ -1,21 +1,26 @@
-import React from 'react';
+import { Outlet, useLocation } from 'react-router-dom';
 import './App.scss';
+import { Header } from './components/Header/Header';
+import { useEffect } from 'react';
+import { Footer } from './components/Footer';
 
-interface Props {
-  onClick: () => void;
-  children: React.ReactNode;
-}
+export const App = () => {
+  const { pathname } = useLocation();
 
-export const Provider: React.FC<Props> = React.memo(({ onClick, children }) => (
-  <button type="button" onClick={onClick}>
-    {children}
-  </button>
-));
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+    });
+  }, [pathname]);
 
-export const App: React.FC = () => {
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>TodoList</Provider>
+    <div className="App">
+      <h1 className="visually-hidden">Product Catalog</h1>
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
     </div>
   );
 };
